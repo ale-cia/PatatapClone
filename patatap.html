@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <title>Space</title>
-
-    <link rel="stylesheet" type="text/css" href="css/patatap.css">
 
     <!-- Load the Paper.js library -->
-    <script type="text/paperscript" src="js/paper-full.js"></script>
+    <script type="text/javascript" src="js/paper-full.js"></script>
+
+    <link rel="stylesheet" href="css/patatap.css">
 
     <!-- Load external PaperScript and associate it with myCanvas -->
-     <script type="text/paperscript" src="js/patatap.js" canvas="myCanvas"></script>
-   
-</head>
-<body>
-    <!-- <h1>Patatap</h1> -->
-    <canvas id="myCanvas" resize></canvas>
+    <script type="text/paperscript" canvas="myCanvas">
 
+    // When a key is pressed, set the content of the text item:
+    function onKeyDown(event) {
+        var maxPoint = new Point(view.size.width, view.size.height);
+        var randomPoint = Point.random();
+        var point = maxPoint * randomPoint;
+        new Path.Circle(point, 10).fillColor = '#FF5733';
+    }
+
+    </script>
+
+</head>
+
+<body>
+	<canvas id="myCanvas" resize></canvas>
 </body>
-</html> 
+</html>
 
 
