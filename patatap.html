@@ -9,6 +9,13 @@
 
     <!-- Load external PaperScript and associate it with myCanvas -->
     <script type="text/paperscript" canvas="myCanvas">
+    	    // When a key is pressed, set the content of the text item:
+    function onKeyDown(event) {
+        var maxPoint = new Point(view.size.width, view.size.height);
+        var randomPoint = Point.random();
+        var point = maxPoint * randomPoint;
+        new Path.Circle(point, 10).fillColor = '#FF5733';
+    }
 
     </script>
 
