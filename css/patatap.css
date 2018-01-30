@@ -1,7 +1,11 @@
-h1 {
-    color:#8B3CB9;
-}
 
 canvas {
-    width: 100;
+  background: #000;
+  height: 100%;
+  width: 100%;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
 }
